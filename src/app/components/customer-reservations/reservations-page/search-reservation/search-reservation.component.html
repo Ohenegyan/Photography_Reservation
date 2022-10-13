@@ -1,1 +1,49 @@
-<p>search-reservation works!</p>
+
+<div class="container p-5">
+    <div *ngIf="reservation">
+        
+        <div class="card">
+            
+            <div class="card-header">
+                <img src="assets/images/logo.png" alt="logo" width="70" height="35"> <span class="mx-2"></span>
+                Upcoming Reservation for:  {{reservation.Name }}  
+            </div>
+            <div class="card-body">
+              <div class="mb-3 p-3">
+                Reservation Code: <span><h2>{{reservation.Id }}</h2></span>
+              </div>
+
+              <div class="mb-3 p-3">
+                Reservation Name: <span><h2>{{reservation.Name }}</h2></span>
+              </div>
+              <div class="mb-3 p-3">
+                Reservation Email: <span><h2>{{reservation.Email }}</h2></span>
+              </div>
+              <div class="mb-3 p-3">
+                Phone Number: <span><h2>{{reservation.Phone }}</h2></span>
+              </div>
+              <div class="mb-3 p-3">
+                Reservation Date: <span><h2>{{reservation.ReservationDate }}</h2></span>
+              </div>
+              <div class="mb-3 p-3">
+                Type of Session: <span><h2>{{reservation.SessionType }}</h2></span>
+              </div>
+              <div class="mb-3 p-3">
+                Reservation Location: <span><h2>{{reservation.ReservationLocation }}</h2></span>
+              </div>
+
+              <div class="mb-3 p-3">
+                Expected Number of People: <span><h2>{{reservation.ExpectedNumOfPeople}}</h2></span>
+              </div>
+              <div class="mb-3 p-3">
+                Additional Information: <span><h2>{{reservation.AdditionalInfo}}</h2></span>
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+                <img src="assets/images/logo.png" alt="logo" width="70" height="35"> <span class="mx-2"></span>
+              A&G Photography
+            </div>
+          </div>
+
+    </div>
+</div>

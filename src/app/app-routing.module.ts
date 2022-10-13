@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'pictures', component: PicturesComponent}, 
   { path: 'reservations-page', component: ReservationsPageComponent},
   { path: 'admin-home-page', component: AdminHomePageComponent},
-  { path: 'admin-home-page/admin-edit-page/:Id', component: AdminEditPageComponent},
+  { path: 'admin-edit-page/:Id', component: AdminEditPageComponent},
   { path: 'reservations-page/search-reservation/:Id', component: SearchReservationComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'}
 ];

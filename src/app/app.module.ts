@@ -12,6 +12,18 @@ import { AdminHomePageComponent } from './components/admin-page/admin-home-page/
 import { AdminEditPageComponent } from './components/admin-page/admin-edit-page/admin-edit-page.component';
 import { ReservationsPageComponent } from './components/customer-reservations/reservations-page/reservations-page.component';
 import { SearchReservationComponent } from './components/customer-reservations/reservations-page/search-reservation/search-reservation.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
+import { MatCardModule} from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule} from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+
+
 
 @NgModule({
   declarations: [
@@ -28,7 +40,19 @@ import { SearchReservationComponent } from './components/customer-reservations/r
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarouselModule.forRoot(),
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgxMaskModule.forRoot(),
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

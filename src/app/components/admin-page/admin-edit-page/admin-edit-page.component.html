@@ -1,1 +1,56 @@
-<p>admin-edit-page works!</p>
+
+<div class="container my-5" *ngIf="editReservation">
+    <h1 class="mb-3">Edit Reservation</h1>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <form #form="ngForm" (ngSubmit)="submitReservation(); form.reset()">
+                
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id:</label>
+                    <input type="text" class="form-control" id="name" readonly name="id" [(ngModel)]="editReservation.Id">
+                  </div> 
+                
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name:</label>
+                  <input type="text" class="form-control" id="name" name="Name" [(ngModel)]="editReservation.Name">
+                </div> 
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="Email" [(ngModel)]="editReservation.Email">
+                </div> 
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="text" class="form-control" id="phone" name="Phone" [(ngModel)]="editReservation.Phone">
+                </div> 
+                <div class="mb-3">
+                      <label for="date" class="form-label">Date:</label>
+                      <input type="text" class="form-control" id="date" name="ReservationDate" [(ngModel)]="editReservation.ReservationDate" mask="0000-00-00">
+                </div> 
+                <div class="mb-3">
+                    <label for="sessionType" class="form-label">Type of Session</label>
+                    <input type="text" class="form-control" id="sessionType" name="SessionType" [(ngModel)]="editReservation.SessionType">
+                </div> 
+                <div class="mb-3">
+                      <label for="location" class="form-label">Location:</label>
+                      <input type="text" class="form-control" id="location" name="ReservationLocation" [(ngModel)]="editReservation.ReservationLocation">
+                </div> 
+                <!-- <div class="mb-3">
+                    <label for="people" class="form-label"># of People:</label>
+                    <input type="text" class="form-control" id="people" name="ExpectedNumOfPeople" [(ngModel)]="editReservation.ExpectedNumOfPeople">
+                </div>  -->
+                <div class="mb-3">
+                      <label for="info" class="form-label">Any Additional Information:</label>
+                      <input type="text" class="form-control" id="info" name="AdditionalInfo" [(ngModel)]="editReservation.AdditionalInfo">
+                </div> 
+                
+                <button class="btn btn-primary">Save Changes</button>
+                <button class="btn btn-danger" (click)="deleteReserve(); form.reset()">Delete Reservation</button>
+            </form>
+        </div>
+    </div>
+
+   
+</div>
+
